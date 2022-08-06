@@ -1,3 +1,5 @@
+apt-get software-properties-common
+add-apt-repository ppa:deadsnakes/ppa
 apt-get update -y
 apt-get install curl python3.8 -y
 mkdir ~/bin
