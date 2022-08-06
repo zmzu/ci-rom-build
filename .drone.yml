@@ -1,6 +1,9 @@
 kind: pipeline
 name: ROM Drone
 
+clone:
+  depth: 50
+
 steps:
  - name: compile
    image: ubuntu:18.04
