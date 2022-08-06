@@ -1,6 +1,6 @@
 #pacman -Syu --noconfirm --needed git python
 apt-get update -y
-apt-get install git build-essential repo -y
+apt-get install repo -y
 #sudo curl --create-dirs -L -o /usr/local/bin/repo -O -L https://storage.googleapis.com/git-repo-downloads/repo
 #sudo chmod a+rx /usr/local/bin/repo
 #wget https://raw.githubusercontent.com/akhilnarang/scripts/master/setup/arch-manjaro.sh && ./arch-manjaro.sh
