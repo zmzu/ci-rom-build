@@ -1,6 +1,6 @@
 
 apt-get update -y
-apt-get install curl python3.8 git -y
+apt-get install build-essential curl python3.8 git -y
 ln -s /usr/bin/python3.8 /usr/bin/python
 mkdir ~/bin
 PATH=~/bin:$PATH
