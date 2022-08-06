@@ -1,4 +1,5 @@
-pacman -Syu --noconfirm --needed python
+df -h
+#pacman -Syu --noconfirm --needed python
 sudo curl --create-dirs -L -o /usr/local/bin/repo -O -L https://storage.googleapis.com/git-repo-downloads/repo
 sudo chmod a+rx /usr/local/bin/repo
 
