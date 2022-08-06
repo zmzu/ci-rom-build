@@ -5,4 +5,5 @@ steps:
  - name: compile
    image: archlinux:latest
    commands:
+          - cd /drone/src
           - bash builder.sh
