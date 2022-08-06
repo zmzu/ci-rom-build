@@ -3,6 +3,6 @@ name: ROM Drone
 
 steps:
  - name: compile
-   image: ubuntu:latest
+   image: ubuntu:18.04
    commands:
           - bash builder.sh
