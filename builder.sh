@@ -3,7 +3,7 @@ apt-get install python openjdk-8-jdk git-core gnupg flex bison build-essential z
 #ln -s /usr/bin/python3.8 /usr/bin/python
 mkdir ~/bin
 PATH=~/bin:$PATH
-curl https://storage.googleapis.com/git-repo-downloads/repo > ~/bin/repo
+curl https://storage.googleapis.com/git-repo-downloads/repo-1 > ~/bin/repo
 chmod a+x ~/bin/repo
 python --version
 java -version
