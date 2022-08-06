@@ -11,5 +11,9 @@ javac -version
 repo init --repo-branch=repo-1 --depth=1 --no-repo-verify -u https://github.com/LineageOS/android.git -b cm-14.1 -g default,-mips,-darwin,-notdefault
 repo sync -c --no-clone-bundle --no-tags --optimized-fetch --prune --force-sync -j8
 git clone https://github.com/RahifM/proprietary_vendor_xiaomi -b cm-14.1 --depth=1 vendor/xiaomi
+export USE_NINJA=false
+rm -rf ~/.jack*
+export ANDROID_JACK_VM_ARGS="-Xmx4g -Dfile.encoding=UTF-8 -XX:+TieredCompilation"
 ./prebuilts/sdk/tools/jack-admin kill-server
+./prebuilts/sdk/tools/jack-admin start-server
 . build/env* && lunch lineage_mido-userdebug && brunch mido
