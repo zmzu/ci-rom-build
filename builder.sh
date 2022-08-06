@@ -2,9 +2,9 @@
 
 apt-get update -y
 apt-get install git build-essential -y
-
-sudo curl --create-dirs -L -o /usr/local/bin/repo -O -L https://storage.googleapis.com/git-repo-downloads/repo
-sudo chmod a+rx /usr/local/bin/repo
+apt-get install repo
+#sudo curl --create-dirs -L -o /usr/local/bin/repo -O -L https://storage.googleapis.com/git-repo-downloads/repo
+#sudo chmod a+rx /usr/local/bin/repo
 
 #wget https://raw.githubusercontent.com/akhilnarang/scripts/master/setup/arch-manjaro.sh && ./arch-manjaro.sh
 
