@@ -5,5 +5,4 @@ steps:
  - name: compile
    image: archlinux:latest
    commands:
-      - pacman -Syu --noconfirm --needed git bc inetutils zip libxml2 python3 jre-openjdk jdk-openjdk flex bison libc++ python-pip
-      - bash builder.sh
+          - bash builder.sh
