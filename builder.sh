@@ -1,5 +1,5 @@
 #pacman -Syu --noconfirm --needed git python
-#apt-get update -y
+apt-get update -y
 apt-get install repo -y
 python --version
 #sudo curl --create-dirs -L -o /usr/local/bin/repo -O -L https://storage.googleapis.com/git-repo-downloads/repo
