@@ -9,7 +9,7 @@ chmod a+x ~/bin/repo
 python --version
 repo init --depth=1 --no-repo-verify -u https://github.com/LineageOS/android.git -b cm-14.1 -g default,-mips,-darwin,-notdefault
 time repo sync -c --no-clone-bundle --no-tags --optimized-fetch --prune --force-sync -j8
-git clone https://github.com/RahifM/proprietary_vendor_xiaomi -b cm-14.1 -depth=1 vendor/xiaomi
+git clone https://github.com/RahifM/proprietary_vendor_xiaomi -b cm-14.1 --depth=1 vendor/xiaomi
 . build/env*
 lunch lineage_mido-userdebug
 brunch mido
