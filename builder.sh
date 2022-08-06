@@ -1,6 +1,6 @@
 #pacman -Syu --noconfirm --needed git python
 apt-get update -y
-apt-get install curl -y
+apt-get install curl gnupg2 -y
 export REPO=$(mktemp /tmp/repo.XXXXXXXXX)
 curl -o ${REPO} https://storage.googleapis.com/git-repo-downloads/repo
 gpg --recv-key 8BB9AD793E8E6153AF0F9A4416530D5E920F5C65
