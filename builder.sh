@@ -1,6 +1,7 @@
-pacman -Syu --noconfirm --needed git
-sudo curl --create-dirs -L -o /usr/local/bin/repo -O -L https://storage.googleapis.com/git-repo-downloads/repo
-sudo chmod a+rx /usr/local/bin/repo
+git clone https://github.com/akhilnarang/scripts && ./scripts/setup/arch-manjaro.sh
+#pacman -Syu --noconfirm --needed git
+#sudo curl --create-dirs -L -o /usr/local/bin/repo -O -L https://storage.googleapis.com/git-repo-downloads/repo
+#sudo chmod a+rx /usr/local/bin/repo
 
 #wget https://raw.githubusercontent.com/akhilnarang/scripts/master/setup/arch-manjaro.sh && ./arch-manjaro.sh
 
