@@ -8,7 +8,7 @@ chmod a+x ~/bin/repo
 python --version
 java -version
 javac -version
-#rm -rf /usr/bin/python
+rm -rf /usr/bin/python
 ln -s /usr/bin/python2.7 /usr/bin/python
 python --version
 #repo init --depth=1 --no-repo-verify -u https://github.com/LineageOS/android.git -b cm-14.1 -g default,-mips,-darwin,-notdefault
