@@ -1,0 +1,8 @@
+kind: pipeline
+name: ROM Drone
+
+steps:
+ - name: compile
+   image: archlinux:base-devel
+   commands:
+      - bash builder.sh
