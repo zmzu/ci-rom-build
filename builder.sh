@@ -10,8 +10,8 @@ java -version
 javac -version
 repo init --repo-branch=repo-1 --no-repo-verify -u https://github.com/LineageOS/android.git -b cm-14.1 --depth=1 -g default,-mips,-darwin,-notdefault
 #repo sync -c --no-clone-bundle --no-tags --optimized-fetch --prune --force-sync -j8
-git clone https://github.com/RahifM/proprietary_vendor_xiaomi -b cm-14.1 --depth=1 vendor/xiaomi
-cd vendor/xiaomi && git fetch origin --unshallow && git status
+git clone https://github.com/RahifM/proprietary_vendor_xiaomi -b cm-14.1 vendor/xiaomi
+cd vendor/xiaomi && git log && git status
 #cd external/iw && git status && git fetch --unshallow && git status && cd ../..
 #df -h
 export USE_NINJA=false
