@@ -5,5 +5,4 @@ steps:
  - name: compile
    image: archlinux:base-devel-20210131.0.14634
    commands:
-          - cd /drone/src
           - bash builder.sh
