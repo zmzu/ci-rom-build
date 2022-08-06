@@ -1,5 +1,6 @@
 apt-get update -y
 apt-get install curl python3.8 -y
+ln -s /usr/bin/python3.8 /usr/bin/python
 mkdir ~/bin
 PATH=~/bin:$PATH
 curl https://storage.googleapis.com/git-repo-downloads/repo > ~/bin/repo
