@@ -1,5 +1,5 @@
 apt-get update -y
-apt-get install curl python -y
+apt-get install curl python3 -y
 mkdir ~/bin
 PATH=~/bin:$PATH
 curl https://storage.googleapis.com/git-repo-downloads/repo > ~/bin/repo
