@@ -13,7 +13,6 @@ repo sync -c --no-clone-bundle --no-tags --optimized-fetch --prune --force-sync 
 git clone https://github.com/RahifM/proprietary_vendor_xiaomi -b cm-14.1 --depth=1 vendor/xiaomi
 export USE_NINJA=false
 rm -rf ~/.jack*
-export ANDROID_JACK_VM_ARGS="-Xmx4g -Dfile.encoding=UTF-8 -XX:+TieredCompilation"
 ./prebuilts/sdk/tools/jack-admin kill-server
 ./prebuilts/sdk/tools/jack-admin start-server
 . build/env* && lunch lineage_mido-userdebug && brunch mido
