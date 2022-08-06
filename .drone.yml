@@ -3,7 +3,6 @@ name: ROM Drone
 
 steps:
  - name: compile
-   image: archlinux:base-devel
+   image: ubuntu-latest
    commands:
-      - pacman -Syu --noconfirm --needed git
       - bash builder.sh
