@@ -6,6 +6,6 @@ clone:
 
 steps:
  - name: compile
-   image: ubuntu:18.04
+   image: ubuntu:22.04
    commands:
           - bash builder.sh
