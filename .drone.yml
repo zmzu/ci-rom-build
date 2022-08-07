@@ -3,6 +3,6 @@ name: ROM Drone
 
 steps:
  - name: compile
-   image: ubuntu:22.04
+   image: ubuntu:20.04
    commands:
           - bash builder.sh
