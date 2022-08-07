@@ -18,7 +18,7 @@ du -hs
 pwd
 ls -a
 cd ..
-zip src.zip src
+zip src.zip src/*
 ls -a
 du -hs *
 #. build/env* && lunch lineage_beryllium-userdebug && brunch beryllium
