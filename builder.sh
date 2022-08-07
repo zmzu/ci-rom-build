@@ -1,5 +1,3 @@
-docker image prune -f
-docker container prune -f
 df -h
 apt-get update -y
 apt-get install curl -y
