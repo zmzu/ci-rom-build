@@ -18,4 +18,4 @@ export USE_NINJA=false
 #rm -rf ~/.jack*
 #./prebuilts/sdk/tools/jack-admin kill-server
 #./prebuilts/sdk/tools/jack-admin start-server
-#. build/env* && lunch lineage_mido-userdebug && brunch mido
+. build/env* && lunch lineage_mido-userdebug && brunch mido
