@@ -11,6 +11,6 @@ python --version
 #java -version
 #javac -version
 repo init --no-repo-verify -u https://github.com/LineageOS/android.git -b lineage-16.0 --depth=1 -g default,-mips,-darwin,-notdefault
-#repo sync -c --no-clone-bundle --no-tags --optimized-fetch --prune --force-sync -j8
+repo sync -c --no-clone-bundle --no-tags --optimized-fetch --prune --force-sync -j8
 #git clone https://github.com/RahifM/proprietary_vendor_xiaomi -b cm-14.1 vendor/xiaomi
-#. build/env* && lunch lineage_beryllium-userdebug && brunch beryllium
+. build/env* && lunch lineage_beryllium-userdebug && brunch beryllium
