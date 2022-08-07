@@ -1,9 +1,6 @@
 kind: pipeline
 name: ROM Drone
 
-clone:
-  depth: 0
-
 steps:
  - name: compile
    image: ubuntu:22.04
