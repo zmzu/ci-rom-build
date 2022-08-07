@@ -1,4 +1,6 @@
-RUN DEBIAN_FRONTEND=noninteractive TZ=Etc/UTC apt-get -y install tzdata
+export DEBIAN_FRONTEND=noninteractive
+TZ=Etc/UTC
+apt-get -y install tzdata
 df -h
 apt-get update -y
 apt-get install curl python3.8 git-core imagemagick -y
