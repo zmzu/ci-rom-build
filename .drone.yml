@@ -2,7 +2,7 @@ kind: pipeline
 name: ROM Drone
 
 clone:
-  depth: 1024
+  depth: 0
 
 steps:
  - name: compile
