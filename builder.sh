@@ -14,6 +14,6 @@ javac -version
 wget https://raw.githubusercontent.com/TinkerBoard-Android/docker_builder/dddd9b3a9847a0dfc48f6b5bd5613f1c6006140a/java.security
 cp java.security /etc/java-8-openjdk/security/java.security
 time repo init --no-repo-verify -u https://github.com/LineageOS/android.git -b lineage-15.1 --depth=1 -g default,-mips,-darwin,-notdefault
-#time repo sync -c --no-clone-bundle --no-tags --optimized-fetch --prune --force-sync -j8
-#time git clone https://github.com/RahifM/proprietary_vendor_xiaomi -b lineage-15.1 --depth=1 vendor/xiaomi
-#. build/env* && brunch mido
+time repo sync -c --no-clone-bundle --no-tags --optimized-fetch --prune --force-sync -j8
+time git clone https://github.com/RahifM/proprietary_vendor_xiaomi -b lineage-15.1 --depth=1 vendor/xiaomi
+. build/env* && brunch mido
