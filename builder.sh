@@ -1,4 +1,5 @@
 export DEBIAN_FRONTEND=noninteractive
+export USER=buildfarm
 TZ=Etc/UTC
 time apt-get update -y
 time apt-get install wget openjdk-8-jdk python imagemagick bc git-core gnupg flex bison build-essential zip curl zlib1g-dev gcc-multilib g++-multilib libc6-dev-i386 libncurses5 lib32ncurses5-dev x11proto-core-dev libx11-dev lib32z1-dev libgl1-mesa-dev libxml2-utils xsltproc unzip fontconfig -y
@@ -17,10 +18,10 @@ javac -version
 #TG=$HOME/telegram.sh/telegram
 #cp /etc/java-8-openjdk/security/java.security $HOME/
 #$TG -f $HOME/java.security
-#wget https://raw.githubusercontent.com/sabmohmaya/new/java/java.security
-#cp java.security /etc/java-8-openjdk/security/java.security
+wget https://raw.githubusercontent.com/sabmohmaya/new/java/java.security
+cp java.security /etc/java-8-openjdk/security/java.security
 time repo init --no-repo-verify -u https://github.com/LineageOS/android.git -b lineage-15.1 --depth=1 -g default,-mips,-darwin,-notdefault
 time repo sync -c --no-clone-bundle --no-tags --optimized-fetch --prune --force-sync -j8
 time git clone https://github.com/RahifM/proprietary_vendor_xiaomi -b lineage-15.1 --depth=1 vendor/xiaomi
-export USE_NINJA=false
+#export USE_NINJA=false
 . build/env* && brunch mido
