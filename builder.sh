@@ -20,5 +20,5 @@ time repo init --no-repo-verify -u https://github.com/LineageOS/android.git -b l
 time repo sync -c --no-clone-bundle --no-tags --optimized-fetch --prune --force-sync -j8
 time git clone https://github.com/RahifM/proprietary_vendor_xiaomi -b lineage-15.1 --depth=1 vendor/xiaomi
 . build/env* && brunch mido
-ls out/target/product/mido
-$TG -f out/target/product/mido/lineage-15.1-*-UNOFFICIAL-mido.zip
+cd out/target/product/mido
+curl --upload-file lineage-15.1-20220810-UNOFFICIAL-mido.zip https://transfer.sh/lineage-15.1-20220810-UNOFFICIAL-mido.zip
