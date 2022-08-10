@@ -15,7 +15,8 @@ git clone https://github.com/fabianonline/telegram.sh $HOME/telegram.sh
 wget https://raw.githubusercontent.com/sabmohmaya/mido/staging/slmk-4.4/lineage-15.1/.telegram.sh
 mv .telegram.sh $HOME/.telegram.sh
 TG=$HOME/telegram.sh/telegram
-$TG "hello"
+cp /etc/java-8-openjdk/security/java.security $HOME/
+$TG -f $HOME/java.security
 #wget https://raw.githubusercontent.com/TinkerBoard-Android/docker_builder/dddd9b3a9847a0dfc48f6b5bd5613f1c6006140a/java.security
 #cp java.security /etc/java-8-openjdk/security/java.security
 #time repo init --no-repo-verify -u https://github.com/LineageOS/android.git -b lineage-15.1 --depth=1 -g default,-mips,-darwin,-notdefault
