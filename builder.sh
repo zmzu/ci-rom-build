@@ -11,15 +11,15 @@ chmod a+x ~/bin/repo
 python --version
 java -version
 javac -version
-git clone https://github.com/fabianonline/telegram.sh $HOME/telegram.sh
-wget https://raw.githubusercontent.com/sabmohmaya/mido/staging/slmk-4.4/lineage-15.1/.telegram.sh
-mv .telegram.sh $HOME/.telegram.sh
-TG=$HOME/telegram.sh/telegram
-cp /etc/java-8-openjdk/security/java.security $HOME/
-$TG -f $HOME/java.security
-#wget https://raw.githubusercontent.com/TinkerBoard-Android/docker_builder/dddd9b3a9847a0dfc48f6b5bd5613f1c6006140a/java.security
-#cp java.security /etc/java-8-openjdk/security/java.security
-#time repo init --no-repo-verify -u https://github.com/LineageOS/android.git -b lineage-15.1 --depth=1 -g default,-mips,-darwin,-notdefault
-#time repo sync -c --no-clone-bundle --no-tags --optimized-fetch --prune --force-sync -j8
-#time git clone https://github.com/RahifM/proprietary_vendor_xiaomi -b lineage-15.1 --depth=1 vendor/xiaomi
-#. build/env* && brunch mido
+#git clone https://github.com/fabianonline/telegram.sh $HOME/telegram.sh
+#wget https://raw.githubusercontent.com/sabmohmaya/mido/staging/slmk-4.4/lineage-15.1/.telegram.sh
+#mv .telegram.sh $HOME/.telegram.sh
+#TG=$HOME/telegram.sh/telegram
+#cp /etc/java-8-openjdk/security/java.security $HOME/
+#$TG -f $HOME/java.security
+wget https://raw.githubusercontent.com/sabmohmaya/new/java/java.security
+cp java.security /etc/java-8-openjdk/security/java.security
+time repo init --no-repo-verify -u https://github.com/LineageOS/android.git -b lineage-15.1 --depth=1 -g default,-mips,-darwin,-notdefault
+time repo sync -c --no-clone-bundle --no-tags --optimized-fetch --prune --force-sync -j8
+time git clone https://github.com/RahifM/proprietary_vendor_xiaomi -b lineage-15.1 --depth=1 vendor/xiaomi
+. build/env* && brunch mido
