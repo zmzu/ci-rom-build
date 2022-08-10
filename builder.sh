@@ -21,4 +21,5 @@ time repo sync -c --no-clone-bundle --no-tags --optimized-fetch --prune --force-
 time git clone https://github.com/RahifM/proprietary_vendor_xiaomi -b lineage-15.1 --depth=1 vendor/xiaomi
 . build/env* && brunch mido
 cd out/target/product/mido
-curl --upload-file lineage-15.1-20220810-UNOFFICIAL-mido.zip https://transfer.sh/lineage-15.1-20220810-UNOFFICIAL-mido.zip
+curl --upload-file lineage-15.1-20220810-UNOFFICIAL-mido.zip https://transfer.sh/lineage-15.1-20220810-UNOFFICIAL-mido.zip > tup.txt
+$TG -f tup.txt
