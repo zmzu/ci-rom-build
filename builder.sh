@@ -17,6 +17,7 @@ javac -version
 wget https://raw.githubusercontent.com/sabmohmaya/new/java/java.security
 cp java.security /etc/java-8-openjdk/security/java.security
 time repo init --no-repo-verify -u https://github.com/LineageOS/android.git -b cm-14.1 --depth=1 -g default,-mips,-darwin,-notdefault
+git clone https://github.com/RahifM/local_manifests -b cm-14.1 --depth=1 .repo/local_manifests
 time repo sync -c --no-clone-bundle --no-tags --optimized-fetch --prune --force-sync -j8
 time git clone https://github.com/RahifM/proprietary_vendor_xiaomi -b cm-14.1 --depth=1 vendor/xiaomi
 . build/env* && brunch mido
