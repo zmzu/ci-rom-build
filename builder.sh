@@ -17,9 +17,10 @@ javac -version
 #TG=$HOME/telegram.sh/telegram
 #cp /etc/java-8-openjdk/security/java.security $HOME/
 #$TG -f $HOME/java.security
-wget https://raw.githubusercontent.com/sabmohmaya/new/java/java.security
-cp java.security /etc/java-8-openjdk/security/java.security
+#wget https://raw.githubusercontent.com/sabmohmaya/new/java/java.security
+#cp java.security /etc/java-8-openjdk/security/java.security
 time repo init --no-repo-verify -u https://github.com/LineageOS/android.git -b lineage-15.1 --depth=1 -g default,-mips,-darwin,-notdefault
 time repo sync -c --no-clone-bundle --no-tags --optimized-fetch --prune --force-sync -j8
 time git clone https://github.com/RahifM/proprietary_vendor_xiaomi -b lineage-15.1 --depth=1 vendor/xiaomi
+export USE_NINJA=false
 . build/env* && brunch mido
