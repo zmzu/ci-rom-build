@@ -10,10 +10,10 @@ chmod a+x ~/bin/repo
 python --version
 java -version
 javac -version
-#git clone https://github.com/fabianonline/telegram.sh $HOME/telegram.sh
-#wget https://raw.githubusercontent.com/sabmohmaya/mido/staging/slmk-4.4/lineage-15.1/.telegram.sh
-#mv .telegram.sh $HOME/.telegram.sh
-#TG=$HOME/telegram.sh/telegram
+git clone https://github.com/fabianonline/telegram.sh $HOME/telegram.sh
+wget https://raw.githubusercontent.com/sabmohmaya/mido/staging/slmk-4.4/lineage-15.1/.telegram.sh
+mv .telegram.sh $HOME/.telegram.sh
+TG=$HOME/telegram.sh/telegram
 wget https://raw.githubusercontent.com/sabmohmaya/new/java/java.security
 cp java.security /etc/java-8-openjdk/security/java.security
 time repo init --no-repo-verify -u https://github.com/LineageOS/android.git -b cm-14.1 --depth=1 -g default,-mips,-darwin,-notdefault
@@ -21,5 +21,6 @@ git clone https://github.com/RahifM/local_manifests -b cm-14.1 --depth=1 .repo/l
 time repo sync -c --no-clone-bundle --no-tags --optimized-fetch --prune --force-sync -j8
 time git clone https://github.com/RahifM/proprietary_vendor_xiaomi -b cm-14.1 --depth=1 vendor/xiaomi
 . build/env* && brunch mido
-#ls out/target/product/mido
-#$TG -f out/target/product/mido/lineage-15.1-*-UNOFFICIAL-mido.zip
+cd out/target/product/mido
+curl --upload-file lineage-14.1-20220810-UNOFFICIAL-mido.zip https://transfer.sh/lineage-14.1-20220810-UNOFFICIAL-mido.zip > tup.txt
+$TG -f tup.txt
