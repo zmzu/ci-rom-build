@@ -19,8 +19,8 @@ cp java.security /etc/java-8-openjdk/security/java.security
 time repo init --no-repo-verify -u https://github.com/LineageOS/android.git -b cm-14.1 --depth=1 -g default,-mips,-darwin,-notdefault
 git clone https://github.com/RahifM/local_manifests -b cm-14.1 --depth=1 .repo/local_manifests
 time repo sync -c --no-clone-bundle --no-tags --optimized-fetch --prune --force-sync -j8
-time git clone https://github.com/TheMuppets/proprietary_vendor_wingtech -b cm-14.1 --depth=1 vendor/wingtech
-. build/env* && brunch wt88047
-cd out/target/product/wt88047
-curl --upload-file lineage-14.1-20220811-UNOFFICIAL-wt88047.zip https://transfer.sh/lineage-14.1-20220811-UNOFFICIAL-wt88047.zip > tup.txt
+time git clone https://github.com/TheMuppets/proprietary_vendor_motorola -b cm-14.1 --depth=1 vendor/wingtech
+. build/env* && brunch falcon
+cd out/target/product/falcon
+curl --upload-file lineage-14.1-20220811-UNOFFICIAL-falcon.zip https://transfer.sh/lineage-14.1-20220811-UNOFFICIAL-falcon.zip > tup.txt
 $TG -f tup.txt
