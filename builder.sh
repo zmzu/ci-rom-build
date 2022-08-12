@@ -22,5 +22,5 @@ time repo sync -c --no-clone-bundle --no-tags --optimized-fetch --prune --force-
 time git clone https://github.com/RahifM/proprietary_vendor_xiaomi -b cm-14.1 --depth=1 vendor/xioami
 . build/env* && brunch ido
 cd out/target/product/ido
-curl --upload-file lineage-14.1-20220811-UNOFFICIAL-ido.zip https://transfer.sh/lineage-14.1-20220811-UNOFFICIAL-ido.zip > tup.txt
+curl --upload-file lineage-14.1-20220812-UNOFFICIAL-ido.zip https://transfer.sh/lineage-14.1-20220812-UNOFFICIAL-ido.zip > tup.txt
 $TG -f tup.txt
