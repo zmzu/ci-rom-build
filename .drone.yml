@@ -12,7 +12,7 @@ steps:
  - name: compile
    image: ubuntu:20.04
    environment:
-          - HOME=/drone/src
+          - BUILD_HOME=/drone/src
    commands:
           - bash builder.sh
 
