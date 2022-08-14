@@ -1,3 +1,4 @@
+df -h
 export DEBIAN_FRONTEND=noninteractive
 export USER=buildfarm
 TZ=Etc/UTC
