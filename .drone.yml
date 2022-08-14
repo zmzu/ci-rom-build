@@ -4,21 +4,19 @@ name: ROM Drone
 restore-cache:
     image: drillster/drone-volume-cache
     restore: true
-    mount: [ /drone/src ]
+    mount: [ /drone ]
     volumes: 
       - /tmp/cache:/cache
 
 steps:
  - name: compile
    image: ubuntu:20.04
-   environment:
-          - BUILD_HOME=/drone/src
    commands:
           - bash builder.sh
 
 rebuild-cache:
     image: drillster/drone-volume-cache
     rebuild: true
-    mount: [ /drone/src ]
+    mount: [ /drone ]
     volumes: 
       - /tmp/cache:/cache
