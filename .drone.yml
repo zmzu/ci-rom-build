@@ -12,7 +12,7 @@ steps:
  - name: compile
    image: ubuntu:20.04
    commands:
-          - bash builder.sh
+          - time bash builder.sh
 
 rebuild-cache:
     image: drillster/drone-volume-cache
