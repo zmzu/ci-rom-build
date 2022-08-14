@@ -13,6 +13,6 @@ time repo init --no-repo-verify -u https://github.com/LineageOS/android.git -b l
 virtualenv -p python2 ~/python
 . ~/python/bin/activate
 python --version
-time repo sync -c --no-clone-bundle --no-tags --optimized-fetch --prune --force-sync -j8
-time git clone https://github.com/RahifM/proprietary_vendor_xiaomi -b lineage-16.0 --depth=1 vendor/xiaomi
-. build/env* && brunch beryllium
+time repo sync -c --no-clone-bundle --no-tags --optimized-fetch --prune --force-sync -j$(nproc --all)
+#time git clone https://github.com/RahifM/proprietary_vendor_xiaomi -b lineage-16.0 --depth=1 vendor/xiaomi
+#. build/env* && brunch beryllium
