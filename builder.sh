@@ -12,9 +12,9 @@ python --version
 #java -version
 #javac -version
 time repo init --no-repo-verify -u https://github.com/LineageOS/android.git -b lineage-16.0 --depth=1 -g default,-mips,-darwin,-notdefault
-virtualenv -p python2 ~/python
-. ~/python/bin/activate
-python --version
-#time repo sync -c --no-clone-bundle --no-tags --optimized-fetch --prune --force-sync -j8
-#time git clone https://github.com/RahifM/proprietary_vendor_xiaomi -b lineage-16.0 --depth=1 vendor/xiaomi
-#. build/env* && brunch beryllium
+#virtualenv -p python2 ~/python
+#. ~/python/bin/activate
+#python --version
+time repo sync -c --no-clone-bundle --no-tags --optimized-fetch --prune --force-sync -j8
+time git clone https://github.com/RahifM/proprietary_vendor_xiaomi -b lineage-16.0 --depth=1 vendor/xiaomi
+. build/env* && brunch beryllium
