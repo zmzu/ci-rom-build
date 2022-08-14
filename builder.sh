@@ -21,7 +21,7 @@ git clone https://github.com/RahifM/local_manifests -b cm-14.1 --depth=1 .repo/l
 repo sync -c --no-clone-bundle --no-tags --optimized-fetch --prune --force-sync -j8
 git clone https://github.com/RahifM/proprietary_vendor_xiaomi -b cm-14.1 --depth=1 vendor/xiaomi
 . build/env*
-time repopick -t n-asb-2021-09 && repopick -t n-asb-2021-10 && repopick -t n-asb-2021-11 && repopick -t n-asb-2021-12
+repopick -t n-asb-2021-09 && repopick -t n-asb-2021-10 && repopick -t n-asb-2021-11 && repopick -t n-asb-2021-12 && repopick -t n-asb-2022-01 && repopick -t n-asb-2022-02 && repopick -t n-asb-2022-03 && repopick -t n-asb-2022-04 && repopick -t n-asb-2022-05 && repopick -t n-asb-2022-06 && repopick -t n-asb-2022-07 && repopick -t n-asb-2022-08
 #brunch mido
 #cd out/target/product/mido
 #curl --upload-file lineage-14.1-20220811-UNOFFICIAL-mido.zip https://transfer.sh/lineage-14.1-20220811-UNOFFICIAL-mido.zip > tup.txt
