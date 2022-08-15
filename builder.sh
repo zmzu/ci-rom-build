@@ -1,3 +1,4 @@
+df -h
 export DEBIAN_FRONTEND=noninteractive
 TZ=Etc/UTC
 time apt-get update -y
