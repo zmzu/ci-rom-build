@@ -20,7 +20,7 @@ python --version
 time repo sync -c --no-clone-bundle --no-tags --optimized-fetch --prune --force-sync -j12
 #time git clone https://github.com/RahifM/proprietary_vendor_xiaomi -b lineage-16.0 --depth=1 vendor/xiaomi
 . build/env* && time lunch lineage_beryllium-userdebug
-ls .repo
-cd .repo
+ls .repo/local_manifests
+cd .repo/local_manifests
 $TG -f roomservice*
 #brunch beryllium
