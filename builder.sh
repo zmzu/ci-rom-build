@@ -23,5 +23,6 @@ time git clone https://github.com/LineageOS/android_device_xiaomi_sdm845-common 
 time git clone https://github.com/LineageOS/android_kernel_xiaomi_sdm845 -b lineage-16.0 --depth=1 kernel/xiaomi/sdm845
 time git clone https://github.com/LineageOS/android_packages_resources_devicesettings -b lineage-16.0 --depth=1 packages/resources/devicesettings
 time git clone https://github.com/RahifM/proprietary_vendor_xiaomi -b lineage-16.0 --depth=1 vendor/xiaomi
-. build/env* && time lunch lineage_beryllium-userdebug
-#brunch beryllium
+. build/env*
+#time lunch lineage_beryllium-userdebug
+brunch beryllium
