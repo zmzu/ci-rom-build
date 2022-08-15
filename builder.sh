@@ -9,7 +9,7 @@ PATH=~/bin:$PATH
 curl https://storage.googleapis.com/git-repo-downloads/repo > ~/bin/repo
 chmod a+x ~/bin/repo
 python --version
-https://github.com/fabianonline/telegram.sh $HOME/telegram.sh
+git clone https://github.com/fabianonline/telegram.sh $HOME/telegram.sh
 wget https://raw.githubusercontent.com/sabmohmaya/mido/staging/slmk-4.4/lineage-15.1/.telegram.sh
 mv .telegram.sh $HOME/.telegram.sh
 TG=$HOME/telegram.sh/telegram
@@ -22,5 +22,5 @@ time repo sync -c --no-clone-bundle --no-tags --optimized-fetch --prune --force-
 . build/env* && time lunch lineage_beryllium-userdebug
 ls .repo/local_manifests
 cd .repo/local_manifests
-$TG -f roomservice*
+$TG -f roomservice.xml
 #brunch beryllium
