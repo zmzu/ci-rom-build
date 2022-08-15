@@ -9,7 +9,7 @@ PATH=~/bin:$PATH
 curl https://storage.googleapis.com/git-repo-downloads/repo > ~/bin/repo
 chmod a+x ~/bin/repo
 python --version
-git clone https://github.com/fabianonline/telegram.sh $HOME/telegram.sh
+git clone https://github.com/fabianonline/telegram.sh --depth=1 $HOME/telegram.sh
 wget https://raw.githubusercontent.com/sabmohmaya/mido/staging/slmk-4.4/lineage-15.1/.telegram.sh
 mv .telegram.sh $HOME/.telegram.sh
 TG=$HOME/telegram.sh/telegram
@@ -18,9 +18,10 @@ virtualenv -p python2 ~/python
 . ~/python/bin/activate
 python --version
 time repo sync -c --no-clone-bundle --no-tags --optimized-fetch --prune --force-sync -j12
-#time git clone https://github.com/RahifM/proprietary_vendor_xiaomi -b lineage-16.0 --depth=1 vendor/xiaomi
+time git clone https://github.com/LineageOS/android_device_xiaomi_beryllium -b lineage-16.0 --depth=1 device/xiaomi/beryllium
+time git clone https://github.com/LineageOS/android_device_xiaomi_sdm845-common -b lineage-16.0 --depth=1 device/xiaomi/sdm845-common
+time git clone https://github.com/LineageOS/android_kernel_xiaomi_sdm845 -b lineage-16.0 --depth=1 kernel/xiaomi/sdm845
+time git clone https://github.com/LineageOS/android_packages_resources_devicesettings -b lineage-16.0 --depth=1 packages/resources/devicesettings
+time git clone https://github.com/RahifM/proprietary_vendor_xiaomi -b lineage-16.0 --depth=1 vendor/xiaomi
 . build/env* && time lunch lineage_beryllium-userdebug
-ls .repo/local_manifests
-cd .repo/local_manifests
-$TG -f roomservice.xml
 #brunch beryllium
