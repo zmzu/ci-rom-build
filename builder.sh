@@ -33,8 +33,8 @@ rm -rf hardware/qcom/media-caf/msm8996
 git clone https://github.com/LineageOS/android_hardware_qcom_media -b lineage-15.1-caf-8996 --depth=1 hardware/qcom/media-caf/msm8996
 cd frame*/native
 wget https://raw.githubusercontent.com/RahifM/frameworks_native/sf-patches/sf.patch && git apply sf.patch
-cd ../../vendor/lineage
-wget https://raw.githubusercontent.com/RahifM/frameworks_native/sf-patches/vsf.patch && git apply vsf.patch
+#cd ../../vendor/lineage
+#wget https://raw.githubusercontent.com/RahifM/frameworks_native/sf-patches/vsf.patch && git apply vsf.patch
 cd ../..
 . build/env*
 #time lunch lineage_mido-userdebug
