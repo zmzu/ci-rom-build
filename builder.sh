@@ -25,6 +25,12 @@ time git clone https://github.com/TheScarastic/android_kernel_xiaomi_msm8953 -b 
 time git clone https://github.com/LineageOS/android_packages_resources_devicesettings -b lineage-16.0 --depth=1 packages/resources/devicesettings
 time git clone https://github.com/TheScarastic/proprietary_vendor_xiaomi -b lineage-16.0 --depth=1 vendor/xiaomi
 rm -rf vendor/qcom/opensource/data-ipa-cfg-mgr
+rm -rf hardware/qcom/display-caf/msm8996
+git clone https://github.com/LineageOS/android_hardware_qcom_display -b lineage-15.1-caf-8996 --depth=1 hardware/qcom/display-caf/msm8996
+rm -rf hardware/qcom/audio-caf/msm8996
+git clone https://github.com/LineageOS/android_hardware_qcom_audio -b lineage-15.1-caf-8996 --depth=1 hardware/qcom/audio-caf/msm8996
+rm -rf hardware/qcom/media-caf/msm8996
+git clone https://github.com/LineageOS/android_hardware_qcom_media -b lineage-15.1-caf-8996 --depth=1 hardware/qcom/media-caf/msm8996
 . build/env*
 #time lunch lineage_mido-userdebug
 brunch mido
