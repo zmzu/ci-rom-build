@@ -29,6 +29,7 @@ rm -rf vendor/qcom/opensource/interfaces
 git clone https://github.com/LineageOS/android_vendor_qcom_opensource_interfaces -b lineage-15.1 --depth=1 vendor/qcom/opensource/interfaces
 rm -rf external/tinycompress
 git clone https://github.com/LineageOS/android_external_tinycompress -b lineage-15.1 --depth=1 external/tinycompress
+rm -rf hardware/qcom/display-caf/sm8150
 rm -rf hardware/qcom/display-caf/msm8996
 git clone https://github.com/LineageOS/android_hardware_qcom_display -b lineage-15.1-caf-8996 --depth=1 hardware/qcom/display-caf/msm8996
 rm -rf hardware/qcom/audio-caf/msm8996
@@ -37,8 +38,8 @@ rm -rf hardware/qcom/media-caf/msm8996
 git clone https://github.com/LineageOS/android_hardware_qcom_media -b lineage-15.1-caf-8996 --depth=1 hardware/qcom/media-caf/msm8996
 cd frame*/native
 wget https://raw.githubusercontent.com/RahifM/frameworks_native/sf-patches/sf.patch && git apply sf.patch
-#cd ../../vendor/lineage
-#wget https://raw.githubusercontent.com/RahifM/frameworks_native/sf-patches/vsf.patch && git apply vsf.patch
+cd ../../vendor/lineage
+wget https://raw.githubusercontent.com/RahifM/frameworks_native/sf-patches/vsf.patch && git apply vsf.patch
 cd ../..
 . build/env*
 #time lunch lineage_mido-userdebug
