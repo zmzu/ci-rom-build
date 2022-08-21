@@ -2,7 +2,7 @@ df -h
 export DEBIAN_FRONTEND=noninteractive
 TZ=Etc/UTC
 apt-get update -y
-apt-get install wget virtualenv rsync python python3.8 imagemagick bc git-core gnupg flex bison build-essential zip curl zlib1g-dev gcc-multilib g++-multilib libc6-dev-i386 libncurses5 lib32ncurses5-dev x11proto-core-dev libx11-dev lib32z1-dev libgl1-mesa-dev libxml2-utils xsltproc unzip fontconfig -y
+apt-get install libssl-dev wget virtualenv rsync python python3.8 imagemagick bc git-core gnupg flex bison build-essential zip curl zlib1g-dev gcc-multilib g++-multilib libc6-dev-i386 libncurses5 lib32ncurses5-dev x11proto-core-dev libx11-dev lib32z1-dev libgl1-mesa-dev libxml2-utils xsltproc unzip fontconfig -y
 mv /usr/bin/python $HOME
 ln -s /usr/bin/python3.8 /usr/bin/python
 mkdir ~/bin
@@ -21,4 +21,7 @@ python --version
 repo sync -c --no-clone-bundle --no-tags --optimized-fetch --prune --force-sync -j12
 . build/env*
 lunch android_x86_64-userdebug
-make -j$(nproc --all) kernel
+#make -j$(nproc --all) kernel
+cd kernel
+git status
+git log
