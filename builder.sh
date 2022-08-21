@@ -20,3 +20,5 @@ virtualenv -p python2 ~/python
 python --version
 repo sync -c --no-clone-bundle --no-tags --optimized-fetch --prune --force-sync -j12
 . build/env*
+lunch android_x86_64-userdebug
+make -j$(nproc --all) kernel
