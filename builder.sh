@@ -29,6 +29,7 @@ cd out/target/product/x86_64
 du -hs kernel
 ls system/lib/modules
 du -hs system/lib/modules
-#cd kernel
-#git status
-#git log
+mkdir newkermel
+cp kernel newkermel
+cp -r system/lib/modules newkermel
+zip -r newkermel.zip newkermel
