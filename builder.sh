@@ -22,8 +22,10 @@ repo sync -c --no-clone-bundle --no-tags --optimized-fetch --prune --force-sync 
 . build/env*
 lunch android_x86_64-userdebug
 make -j$(nproc --all) kernel
-ls out/target/product
-ls out/target/product/x86_64
+cd out/target/product/x86_64
+du -hs kernel
+ls system/lib/modules
+du -hs system/lib/modules
 #cd kernel
 #git status
 #git log
