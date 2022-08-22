@@ -19,9 +19,9 @@ virtualenv -p python2 ~/python
 . ~/python/bin/activate
 python --version
 repo sync -c --no-clone-bundle --no-tags --optimized-fetch --prune --force-sync -j12
-rm -rf kernel
-git clone https://github.com/RahifM/android-x86-kernel -b staging/android-x86-9.0-r2/slmk --depth=1 kernel 
-repo sync kernel/configs
+#rm -rf kernel
+#git clone https://github.com/RahifM/android-x86-kernel -b staging/android-x86-9.0-r2/slmk --depth=1 kernel 
+#repo sync kernel/configs
 . build/env*
 lunch android_x86_64-userdebug
 make -j$(nproc --all) kernel
