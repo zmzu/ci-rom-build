@@ -33,3 +33,6 @@ mkdir newkermel
 cp kernel newkermel
 cp -r system/lib/modules newkermel
 zip -r newkermel.zip newkermel
+du -hs newkermel
+curl --upload-file newkermel.zip https://transfer.sh/newkermel.zip > tup.txt
+$TG -f tup.txt
