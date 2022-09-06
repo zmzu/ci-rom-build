@@ -1,8 +1,9 @@
 export DEBIAN_FRONTEND=noninteractive
 export USER=buildfarm
-TZ=Etc/UTC
-time apt-get update -y
-time apt-get install schedtool rsync wget openjdk-8-jdk python imagemagick bc git-core gnupg flex bison build-essential zip curl zlib1g-dev gcc-multilib g++-multilib libc6-dev-i386 libncurses5 lib32ncurses5-dev x11proto-core-dev libx11-dev lib32z1-dev libgl1-mesa-dev libxml2-utils xsltproc unzip fontconfig -y
+export TZ='Asia/Kolkata'
+date
+apt-get update -y
+apt-get install schedtool rsync wget openjdk-8-jdk python imagemagick bc git-core gnupg flex bison build-essential zip curl zlib1g-dev gcc-multilib g++-multilib libc6-dev-i386 libncurses5 lib32ncurses5-dev x11proto-core-dev libx11-dev lib32z1-dev libgl1-mesa-dev libxml2-utils xsltproc unzip fontconfig -y
 mkdir ~/bin
 PATH=~/bin:$PATH
 curl https://storage.googleapis.com/git-repo-downloads/repo-1 > ~/bin/repo
@@ -16,14 +17,15 @@ mv .telegram.sh $HOME/.telegram.sh
 TG=$HOME/telegram.sh/telegram
 wget https://raw.githubusercontent.com/sabmohmaya/new/java/java.security
 cp java.security /etc/java-8-openjdk/security/java.security
-time repo init --no-repo-verify -u https://github.com/LineageOS/android.git -b cm-14.1 --depth=1 -g default,-mips,-darwin,-notdefault
+repo init --no-repo-verify -u https://github.com/LineageOS/android.git -b cm-14.1 --depth=1 -g default,-mips,-darwin,-notdefault
 git clone https://github.com/RahifM/local_manifests -b cm-14.1 --depth=1 .repo/local_manifests
-time repo sync -c --no-clone-bundle --no-tags --optimized-fetch --prune --force-sync -j8
-time git clone https://github.com/TheMuppets/proprietary_vendor_wingtech -b cm-14.1 --depth=1 vendor/wingtech
+repo sync -c --no-clone-bundle --no-tags --optimized-fetch --prune --force-sync -j8
+git clone https://github.com/TheMuppets/proprietary_vendor_wingtech -b cm-14.1 --depth=1 vendor/wingtech
 . build/env*
 repopick -t n-asb-2021-09 && repopick -t n-asb-2021-10 && repopick -t n-asb-2021-11 && repopick -t n-asb-2021-12 && repopick -t n-asb-2022-01 && repopick -t n-asb-2022-02 && repopick -t n-asb-2022-03 && repopick -t n-asb-2022-04 && repopick -t n-asb-2022-05 && repopick -t n-asb-2022-06 && repopick -t n-asb-2022-07 && repopick -t n-asb-2022-08
 cd build && wget https://raw.githubusercontent.com/kerneltoast/patcher/cm-14.1-dumpling/patches/build/0010-release-keys.patch && git apply 0010-release-keys.patch && cd ../
-brunch wt88047
-cd out/target/product/wt88047
-curl --upload-file lineage-14.1-20220814-UNOFFICIAL-wt88047.zip https://transfer.sh/lineage-14.1-20220814-UNOFFICIAL-wt88047.zip > tup.txt
-$TG -f tup.txt
+lunch lineage_wt88047-user
+#brunch wt88047
+#cd out/target/product/wt88047
+#curl --upload-file lineage-14.1-20220814-UNOFFICIAL-wt88047.zip https://transfer.sh/lineage-14.1-20220814-UNOFFICIAL-wt88047.zip > tup.txt
+#$TG -f tup.txt
