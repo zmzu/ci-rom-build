@@ -27,7 +27,7 @@ cd build && wget https://raw.githubusercontent.com/kerneltoast/patcher/cm-14.1-d
 cd external/iw && wget https://raw.githubusercontent.com/RahifM/repo_update/cm-14.1-patches/iw.patch && git apply iw.patch && cd ../..
 lunch lineage_wt88047-user
 cd device/wingtech/wt88047 && wget https://raw.githubusercontent.com/RahifM/repo_update/cm-14.1-patches/wtfp.patch && git apply wtfp.patch && cd ../../..
-make -j$(nproc --all) bacon
+make -j8 bacon
 cd out/target/product/wt88047
 curl --upload-file lineage-14.1-20220906-UNOFFICIAL-wt88047.zip https://transfer.sh/lineage-14.1-20220906-UNOFFICIAL-wt88047.zip > tup.txt
 $TG -f tup.txt
