@@ -25,9 +25,10 @@ git clone https://github.com/TheMuppets/proprietary_vendor_wingtech -b cm-14.1 -
 repopick -t n-asb-2021-09 && repopick -t n-asb-2021-10 && repopick -t n-asb-2021-11 && repopick -t n-asb-2021-12 && repopick -t n-asb-2022-01 && repopick -t n-asb-2022-02 && repopick -t n-asb-2022-03 && repopick -t n-asb-2022-04 && repopick -t n-asb-2022-05 && repopick -t n-asb-2022-06 && repopick -t n-asb-2022-07 && repopick -t n-asb-2022-08
 cd build && wget https://raw.githubusercontent.com/kerneltoast/patcher/cm-14.1-dumpling/patches/build/0010-release-keys.patch && git apply 0010-release-keys.patch && cd ../
 cd external/iw && wget https://raw.githubusercontent.com/RahifM/repo_update/cm-14.1-patches/iw.patch && git apply iw.patch && cd ../..
-lunch lineage_wt88047-user
-cd device/wingtech/wt88047 && wget https://raw.githubusercontent.com/RahifM/repo_update/cm-14.1-patches/wtfp.patch && git apply wtfp.patch && cd ../../..
-make -j8 bacon
+#lunch lineage_wt88047-user
+#cd device/wingtech/wt88047 && wget https://raw.githubusercontent.com/RahifM/repo_update/cm-14.1-patches/wtfp.patch && git apply wtfp.patch && cd ../../..
+#make -j8 bacon
+brunch wt88047
 cd out/target/product/wt88047
 curl --upload-file lineage-14.1-20220906-UNOFFICIAL-wt88047.zip https://transfer.sh/lineage-14.1-20220906-UNOFFICIAL-wt88047.zip > tup.txt
 $TG -f tup.txt
