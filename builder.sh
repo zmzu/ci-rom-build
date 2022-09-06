@@ -1,7 +1,6 @@
 export DEBIAN_FRONTEND=noninteractive
 export USER=buildfarm
 export TZ='Asia/Kolkata'
-date
 apt-get update -y
 apt-get install schedtool rsync wget openjdk-8-jdk python imagemagick bc git-core gnupg flex bison build-essential zip curl zlib1g-dev gcc-multilib g++-multilib libc6-dev-i386 libncurses5 lib32ncurses5-dev x11proto-core-dev libx11-dev lib32z1-dev libgl1-mesa-dev libxml2-utils xsltproc unzip fontconfig -y
 mkdir ~/bin
@@ -18,7 +17,6 @@ TG=$HOME/telegram.sh/telegram
 wget https://raw.githubusercontent.com/RahifM/repo_update/java/java.security
 cp java.security /etc/java-8-openjdk/security/java.security
 repo init --no-repo-verify -u https://github.com/LineageOS/android.git -b cm-14.1 --depth=1 -g default,-mips,-darwin,-notdefault
-#git clone https://github.com/RahifM/local_manifests -b cm-14.1 --depth=1 .repo/local_manifests
 repo sync -c --no-clone-bundle --no-tags --optimized-fetch --prune --force-sync -j8
 git clone https://github.com/TheMuppets/proprietary_vendor_wingtech -b cm-14.1 --depth=1 vendor/wingtech
 . build/env*
@@ -28,7 +26,6 @@ cd external/iw && wget https://raw.githubusercontent.com/RahifM/repo_update/cm-1
 lunch lineage_wt88047-user
 cd device/wingtech/wt88047 && wget https://raw.githubusercontent.com/RahifM/repo_update/cm-14.1-patches/wtfp.patch && git apply wtfp.patch && cd ../../..
 make -j$(nproc --all) bacon
-#brunch wt88047
 cd out/target/product/wt88047
 curl --upload-file lineage-14.1-20220906-UNOFFICIAL-wt88047.zip https://transfer.sh/lineage-14.1-20220906-UNOFFICIAL-wt88047.zip > tup.txt
 $TG -f tup.txt
