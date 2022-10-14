@@ -14,5 +14,8 @@ TG=$HOME/telegram.sh/telegram
 time repo init --no-repo-verify -u https://github.com/LineageOS/android.git -b lineage-18.1 --depth=1 -g default,-mips,-darwin,-notdefault
 git clone https://github.com/ramimrashid/local_manifest -b main --depth 1 .repo/local_manifests
 time repo sync -c --no-clone-bundle --no-tags --optimized-fetch --prune --force-sync -j12
+ls device/google
+ls kernel/google
+ls vendor/google
 . build/env*
 time lunch lineage_coral-userdebug
