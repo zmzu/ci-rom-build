@@ -12,7 +12,7 @@ wget https://raw.githubusercontent.com/sabmohmaya/mido/staging/slmk-4.4/lineage-
 mv .telegram.sh $HOME/.telegram.sh
 TG=$HOME/telegram.sh/telegram
 time repo init --no-repo-verify -u https://github.com/LineageOS/android.git -b lineage-18.1 --depth=1 -g default,-mips,-darwin,-notdefault
-git clone https://github.com/ramimrashid/local_manifest -b main --depth 1 .repo/local_manifests
+git clone https://github.com/ramimrashid/local_manifest -b los --depth 1 .repo/local_manifests
 time repo sync -c --no-clone-bundle --no-tags --optimized-fetch --prune --force-sync -j12
 echo "BREAK..."
 ls device/google
@@ -25,4 +25,3 @@ ls packages/apps
 echo "BREAK..."
 . build/env*
 time lunch lineage_coral-userdebug
-time mka bacon
