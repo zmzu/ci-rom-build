@@ -12,17 +12,8 @@ wget https://raw.githubusercontent.com/sabmohmaya/mido/staging/slmk-4.4/lineage-
 mv .telegram.sh $HOME/.telegram.sh
 TG=$HOME/telegram.sh/telegram
 time repo init --no-repo-verify -u https://github.com/LineageOS/android.git -b lineage-18.1 --depth=1 -g default,-mips,-darwin,-notdefault
-git clone https://github.com/ramimrashid/local_manifest -b los --depth 1 .repo/local_manifests
 time repo sync -c --no-clone-bundle --no-tags --optimized-fetch --prune --force-sync -j12
-echo "BREAK..."
-ls device/google
-echo "BREAK..."
-ls kernel/google
-echo "BREAK..."
-ls vendor/google
-echo "BREAK..."
-ls packages/apps
-echo "BREAK..."
+git clone https://gitlab.com/the-muppets/proprietary_vendor_xiaomi -b lineage-18.1 --depth=1 vendor/xiaomi
 . build/env*
-time lunch lineage_coral-userdebug
-time mka bacon
+time lunch lineage_beryllium-user
+#time mka bacon
