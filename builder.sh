@@ -14,7 +14,7 @@ TG=$HOME/telegram.sh/telegram
 time repo init --no-repo-verify -u https://github.com/LineageOS/android.git -b lineage-18.1 --depth=1 -g default,-mips,-darwin,-notdefault
 time repo sync -c --no-clone-bundle --no-tags --optimized-fetch --prune --force-sync -j12
 git clone https://gitlab.com/the-muppets/proprietary_vendor_xiaomi -b lineage-18.1 --depth=1 vendor/xiaomi
-time cd build/make && time wget https://raw.githubusercontent.com/RahifM/repo_update/lineage-18.1-patches/relkey.patch && git apply relkey.patch && cd ../..
+time cd build/make && wget https://raw.githubusercontent.com/RahifM/repo_update/lineage-18.1-patches/relkey.patch && git apply relkey.patch && cd ../..
 . build/env*
 time lunch lineage_beryllium-user
 #time mka bacon
