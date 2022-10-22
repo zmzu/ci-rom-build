@@ -11,8 +11,8 @@ git clone https://github.com/fabianonline/telegram.sh --depth=1 $HOME/telegram.s
 wget https://raw.githubusercontent.com/sabmohmaya/mido/staging/slmk-4.4/lineage-15.1/.telegram.sh
 mv .telegram.sh $HOME/.telegram.sh
 TG=$HOME/telegram.sh/telegram
-time repo init --no-repo-verify -u https://github.com/LineageOS/android.git -b lineage-18.1 --depth=1 -g default,-mips,-darwin,-notdefault
-git clone https://github.com/ramimrashid/local_manifest -b los --depth 1 .repo/local_manifests
+time repo init --no-repo-verify -u https://github.com/LineageOS/android.git -b lineage-20.0 --depth=1 -g default,-mips,-darwin,-notdefault
+git clone https://github.com/ramimrashid/local_manifest -b twenty --depth 1 .repo/local_manifests
 time repo sync -c --no-clone-bundle --no-tags --optimized-fetch --prune --force-sync -j12
 echo "BREAK..."
 ls device/google
