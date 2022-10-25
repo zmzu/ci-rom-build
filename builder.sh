@@ -16,6 +16,7 @@ git clone https://github.com/ramimrashid/local_manifest -b arrow --depth 1 .repo
 time repo sync -c --no-clone-bundle --no-tags --optimized-fetch --prune --force-sync -j12
 git clone https://github.com/LineageOS/android_hardware_qcom_sm8150_display
 git clone https://github.com/LineageOS/android_vendor_qcom_opensource_display
+git clone https://github.com/LineageOS/android_vendor_qcom_opensource_display-commonsys-intf
 git clone https://github.com/LineageOS/android_hardware_qcom_sm8150_data_ipacfg-mgr
 echo "BREAK..."
 ls device/google
