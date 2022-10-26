@@ -14,14 +14,6 @@ TG=$HOME/telegram.sh/telegram
 time repo init --no-repo-verify -u https://github.com/ArrowOS/android_manifest.git -b arrow-13.0 --depth=1 -g default,-mips,-darwin,-notdefault
 git clone https://github.com/ramimrashid/local_manifest -b arrow --depth 1 .repo/local_manifests
 time repo sync -c --no-clone-bundle --no-tags --optimized-fetch --prune --force-sync -j12
-rm -rf hardware/qcom/sm8150/display
-git clone https://github.com/LineageOS/android_hardware_qcom_sm8150_display -b lineage-20.0 hardware/qcom/sm8150/display
-rm -rf vendor/qcom/opensource/display
-git clone https://github.com/LineageOS/android_vendor_qcom_opensource_display -b lineage-20.0 vendor/qcom/opensource/display
-rm -rf vendor/qcom/opensource/commonsys-intf/display
-git clone https://github.com/LineageOS/android_vendor_qcom_opensource_display-commonsys-intf -b lineage-20.0 vendor/qcom/opensource/commonsys-intf/display
-rm -rf hardware/qcom/sm8150/data/ipacfg-mgr
-git clone https://github.com/LineageOS/android_hardware_qcom_sm8150_data_ipacfg-mgr -b lineage-20.0 hardware/qcom/sm8150/data/ipacfg-mgr
 echo "BREAK..."
 ls device/google
 echo "BREAK..."
