@@ -12,17 +12,10 @@ git clone https://github.com/fabianonline/telegram.sh --depth=1 $HOME/telegram.s
 wget https://raw.githubusercontent.com/sabmohmaya/mido/staging/slmk-4.4/lineage-15.1/.telegram.sh
 mv .telegram.sh $HOME/.telegram.sh
 TG=$HOME/telegram.sh/telegram
-time repo init --no-repo-verify -u https://github.com/LineageOS/android.git -b lineage-18.1 --depth=1 -g default,-mips,-darwin,-notdefault
-time git clone https://github.com/RahifM/local_manifests -b lineage-18.1-beryllium --depth 1 .repo/local_manifests
+time repo init --no-repo-verify -u https://github.com/LineageOS/android.git -b lineage-20.0 --depth=1 -g default,-mips,-darwin,-notdefault
+#time git clone https://github.com/RahifM/local_manifests -b lineage-18.1-beryllium --depth 1 .repo/local_manifests
 time repo sync -c --no-clone-bundle --no-tags --optimized-fetch --prune --force-sync -j12
-cd build/make
-git status
-git log --oneline
-cd ../..
-cd vendor/xiaomi
-git status
-git log --oneline
-cd ../..
+git clone https://gitlab.com/the-muppets/proprietary_vendor_xiaomi -b lineage-19.0 --depth=1 vendor/xiaomi
 . build/env*
-time lunch lineage_beryllium-user
-#time mka bacon
+time lunch lineage_beryllium-eng
+time mka bacon
