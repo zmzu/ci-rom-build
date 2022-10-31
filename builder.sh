@@ -18,7 +18,7 @@ time repo sync -c --no-clone-bundle --no-tags --optimized-fetch --prune --force-
 cd device/xiaomi/sdm845-common
 git status
 git log --oneline
-cd ../..
+cd ../../..
 . build/env*
 time lunch lineage_beryllium-userdebug
 #time mka bacon
