@@ -15,11 +15,11 @@ time repo init --no-repo-verify -u https://github.com/PixelExperience/manifest -
 git clone https://github.com/ramimrashid/local_manifest -b pe --depth 1 .repo/local_manifests
 time repo sync -c --no-clone-bundle --no-tags --optimized-fetch --prune --force-sync -j12
 echo "BREAK..."
-ls device/google
+ls device/google/coral
 echo "BREAK..."
-ls kernel/google
+ls kernel/google/coral
 echo "BREAK..."
-ls vendor/google
+ls vendor/google/coral
 echo "BREAK..."
 ls packages/apps
 echo "BREAK..."
