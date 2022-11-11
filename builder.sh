@@ -25,4 +25,4 @@ ls packages/apps
 echo "BREAK..."
 . build/env*
 time lunch lineage_coral-userdebug
-time mka bacon
+time make bacon
