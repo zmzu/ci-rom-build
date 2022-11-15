@@ -4,10 +4,10 @@ export DEBIAN_FRONTEND=noninteractive
 TZ=Etc/UTC
 time sudo apt-get update -y
 time sudo apt-get install wget virtualenv rsync python python3.8 imagemagick bc git-core gnupg flex bison build-essential zip curl zlib1g-dev gcc-multilib g++-multilib libc6-dev-i386 libncurses5 lib32ncurses5-dev x11proto-core-dev libx11-dev lib32z1-dev libgl1-mesa-dev libxml2-utils libssl-dev xsltproc unzip fontconfig -y
-mkdir $HOME/rom/bin
-PATH=$HOME/rom/bin:$PATH
-curl https://storage.googleapis.com/git-repo-downloads/repo > $HOME/rom/bin/repo
-chmod a+x $HOME/rom/bin/repo
+#mkdir $HOME/rom/bin
+#PATH=$HOME/rom/bin:$PATH
+curl https://storage.googleapis.com/git-repo-downloads/repo > ~/bin/repo
+chmod a+x ~/bin/repo
 git clone https://github.com/fabianonline/telegram.sh --depth=1 $HOME/telegram.sh
 wget https://raw.githubusercontent.com/sabmohmaya/mido/staging/slmk-4.4/lineage-15.1/.telegram.sh
 mv .telegram.sh $HOME/.telegram.sh
