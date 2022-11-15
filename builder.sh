@@ -12,6 +12,7 @@ git clone https://github.com/fabianonline/telegram.sh --depth=1 $HOME/telegram.s
 wget https://raw.githubusercontent.com/sabmohmaya/mido/staging/slmk-4.4/lineage-15.1/.telegram.sh
 mv .telegram.sh $HOME/.telegram.sh
 TG=$HOME/telegram.sh/telegram
+git config --global color.ui false
 git config --global user.name RahifM
 git config --global user.email rahifmanjatha372@gmail.com
 time repo init --no-repo-verify -u https://github.com/LineageOS/android.git -b lineage-18.1 --depth=1 -g default,-mips,-darwin,-notdefault
