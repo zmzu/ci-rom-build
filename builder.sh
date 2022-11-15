@@ -1,15 +1,13 @@
 set -e
-ls
-pwd
 df -h
 export DEBIAN_FRONTEND=noninteractive
 TZ=Etc/UTC
 time sudo apt-get update -y
 time sudo apt-get install wget virtualenv rsync python python3.8 imagemagick bc git-core gnupg flex bison build-essential zip curl zlib1g-dev gcc-multilib g++-multilib libc6-dev-i386 libncurses5 lib32ncurses5-dev x11proto-core-dev libx11-dev lib32z1-dev libgl1-mesa-dev libxml2-utils libssl-dev xsltproc unzip fontconfig -y
-mkdir ~/bin
-PATH=~/bin:$PATH
-curl https://storage.googleapis.com/git-repo-downloads/repo > ~/bin/repo
-chmod a+x ~/bin/repo
+mkdir ~/rom/bin
+PATH=~/rom/bin:$PATH
+curl https://storage.googleapis.com/git-repo-downloads/repo > ~/rom/bin/repo
+chmod a+x ~/rom/bin/repo
 git clone https://github.com/fabianonline/telegram.sh --depth=1 $HOME/telegram.sh
 wget https://raw.githubusercontent.com/sabmohmaya/mido/staging/slmk-4.4/lineage-15.1/.telegram.sh
 mv .telegram.sh $HOME/.telegram.sh
@@ -19,8 +17,4 @@ time git clone https://github.com/RahifM/local_manifests -b lineage-18.1-berylli
 time repo sync -c --no-clone-bundle --no-tags --optimized-fetch --prune --force-sync -j12
 . build/env*
 time lunch lineage_beryllium-userdebug
-cd device/xiaomi/sdm845-common
-git status
-git log --oneline
-cd ../../..
 #time mka bacon
