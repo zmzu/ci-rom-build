@@ -1,4 +1,6 @@
 set -e
+ls
+pwd
 df -h
 export DEBIAN_FRONTEND=noninteractive
 TZ=Etc/UTC
