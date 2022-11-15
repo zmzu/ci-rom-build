@@ -14,4 +14,4 @@ time git clone https://github.com/RahifM/local_manifests -b lineage-18.1-berylli
 time repo sync -c --no-clone-bundle --no-tags --optimized-fetch --prune --force-sync -j12
 . build/env*
 time lunch lineage_beryllium-userdebug
-#time mka bacon
+time mka bacon
