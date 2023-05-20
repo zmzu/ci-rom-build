@@ -12,7 +12,7 @@ python --version
 java -version
 javac -version
 git clone https://github.com/fabianonline/telegram.sh $HOME/telegram.sh
-wget https://raw.githubusercontent.com/sabmohmaya/mido/staging/slmk-4.4/lineage-15.1/.telegram.sh
+wget https://raw.githubusercontent.com/zmzu/ci-rom-build/tgsh/.telegram.sh
 mv .telegram.sh $HOME/.telegram.sh
 TG=$HOME/telegram.sh/telegram
 wget https://raw.githubusercontent.com/RahifM/repo_update/java/java.security
