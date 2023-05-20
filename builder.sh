@@ -34,7 +34,7 @@ git clone https://github.com/LineageOS/android_device_cyanogen_msm8916-common -b
 git clone https://github.com/LineageOS/android_kernel_wingtech_msm8916 -b cm-14.1 --depth=1 kernel/wingtech/msm8916
 git clone https://github.com/LineageOS/android_external_stlport -b cm-14.1 --depth=1 external/stlport
 git clone https://github.com/LineageOS/android_device_qcom_common -b cm-14.1 --depth=1 device/qcom/common
-lunch lineage_wt88047
+brunch wt88047
 cd device/wingtech/wt88047 && wget https://raw.githubusercontent.com/RahifM/repo_update/cm-14.1-patches/wtfp.patch && git apply wtfp.patch && cd ../../..
 #make -j$(nproc --all) bacon
 cd out/target/product/wt88047
