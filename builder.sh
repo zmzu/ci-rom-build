@@ -17,6 +17,9 @@ mv .telegram.sh $HOME/.telegram.sh
 TG=$HOME/telegram.sh/telegram
 wget https://raw.githubusercontent.com/RahifM/repo_update/java/java.security
 sudo cp java.security /etc/java-8-openjdk/security/java.security
+git config --global color.ui false
+git config --global user.name RahifM
+git config --global user.email rahifmanjatha372@gmail.com
 repo init --no-repo-verify -u https://github.com/LineageOS/android.git -b cm-14.1 --depth=1 -g default,-mips,-darwin,-notdefault
 repo sync -c --no-clone-bundle --no-tags --optimized-fetch --prune --force-sync -j8
 git clone https://github.com/TheMuppets/proprietary_vendor_wingtech -b cm-14.1 --depth=1 vendor/wingtech
