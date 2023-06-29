@@ -16,6 +16,6 @@ jobs:
 
           run: |
             echo "start"
-            curl https://raw.githubusercontent.com/zmzu/ci-rom-build/lineage-14.1-wt88047/builder.sh && bash builder.sh
+            curl https://raw.githubusercontent.com/zmzu/ci-rom-build/lineage-14.1-wt88047/builder.sh > builder.sh && bash builder.sh
 
             
