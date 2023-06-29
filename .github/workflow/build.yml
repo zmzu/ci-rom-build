@@ -1,0 +1,12 @@
+name: Builder
+on:
+  push
+
+jobs:
+  builder:
+      runs-on: ubuntu-latest
+      steps:
+        - name: test
+          run: |
+            echo "hello"
+            
