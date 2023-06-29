@@ -13,5 +13,7 @@ time repo init --no-repo-verify -u https://github.com/LineageOS/android.git -b l
 time git clone https://github.com/RahifM/local_manifests -b lineage-18.1-beryllium --depth 1 .repo/local_manifests
 time repo sync -c --no-clone-bundle --no-tags --optimized-fetch --prune --force-sync -j12
 . build/env*
-time lunch lineage_beryllium-userdebug
+time lunch lineage_beryllium-user
 #time mka bacon
+cd device/xiaomi/sdm845-common
+git reset --hard
