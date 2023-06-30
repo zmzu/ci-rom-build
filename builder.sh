@@ -17,5 +17,7 @@ time lunch lineage_beryllium-user
 #time mka bacon
 cd device/xiaomi/sdm845-common
 git reset --hard
+cd ../../..
+ls external/chromium-webview/prebuilt
 cd external/chromium-webview/prebuilt/arm
 git log
