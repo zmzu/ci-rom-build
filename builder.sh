@@ -24,7 +24,6 @@ git config --global user.name RahifM
 git config --global user.email rahifmanjatha372@gmail.com
 repo init --no-repo-verify -u https://github.com/LineageOS/android.git -b cm-14.1 --depth=1 -g default,-mips,-darwin,-notdefault
 git clone https://github.com/RahifM/local_manifests --depth 1 -b cm-14.1 .repo/local_manifests
-
 repo sync -c --no-clone-bundle --no-tags --optimized-fetch --prune --force-sync -j8
 df -h
 #git clone https://github.com/TheMuppets/proprietary_vendor_wingtech -b cm-14.1 --depth=1 vendor/wingtech
