@@ -1,0 +1,14 @@
+version: 2.1
+jobs:
+  rom:
+    machine:
+      image: ubuntu-2004:current
+    steps:
+      - checkout
+      - run:
+          name: "build"
+          command: bash builder.sh
+workflows:
+  rom-workflow:
+    jobs:
+      - ro
