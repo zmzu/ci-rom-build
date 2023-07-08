@@ -15,7 +15,7 @@ wget https://raw.githubusercontent.com/sabmohmaya/mido/staging/slmk-4.4/lineage-
 mv .telegram.sh $HOME/.telegram.sh
 TG=$HOME/telegram.sh/telegram
 wget https://raw.githubusercontent.com/RahifM/repo_update/java/java.security
-cp java.security /etc/java-8-openjdk/security/java.security
+sudo cp java.security /etc/java-8-openjdk/security/java.security
 git config --global color.ui false
 git config --global user.name RahifM
 git config --global user.email rahifmanjatha372@gmail.com
