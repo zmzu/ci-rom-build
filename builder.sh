@@ -20,8 +20,9 @@ repo init --no-repo-verify -u https://github.com/LineageOS/android.git -b lineag
 repo sync -c --no-clone-bundle --no-tags --optimized-fetch --prune --force-sync -j8
 git clone https://github.com/RahifM/proprietary_vendor_xiaomi -b lineage-15.1 --depth=1 vendor/xiaomi
 cd build/make && wget https://raw.githubusercontent.com/RahifM/repo_update/lineage-15.1-patches/relkey.patch && git apply relkey.patch && cd ../..
-. build/env* && brunch mido
-#lunch lineage_mido-user && make -j$(nproc --all) bacon
-cd out/target/product/mido
-curl --upload-file lineage-15.1-20220906-UNOFFICIAL-mido.zip https://transfer.sh/lineage-15.1-20220906-UNOFFICIAL-mido.zip > tup.txt
-$TG -f tup.txt
+. build/env*
+#brunch mido
+lunch lineage_mido-user && mka bacon
+#cd out/target/product/mido
+#curl --upload-file lineage-15.1-20220906-UNOFFICIAL-mido.zip https://transfer.sh/lineage-15.1-20220906-UNOFFICIAL-mido.zip > tup.txt
+#$TG -f tup.txt
