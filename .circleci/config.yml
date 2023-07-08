@@ -11,4 +11,4 @@ jobs:
 workflows:
   rom-workflow:
     jobs:
-      - ro
+      - rom
