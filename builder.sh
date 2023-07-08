@@ -27,5 +27,5 @@ time repo sync -c --no-clone-bundle --no-tags --optimized-fetch --prune --force-
 time git clone https://github.com/RahifM/proprietary_vendor_xiaomi -b lineage-16.0 --depth=1 vendor/xiaomi
 . build/env*
 time lunch lineage_beryllium-user
-mka bacon
+#mka bacon
 #brunch beryllium
