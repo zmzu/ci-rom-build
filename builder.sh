@@ -22,7 +22,8 @@ git config --global user.name RahifM
 git config --global user.email rahifmanjatha372@gmail.com
 repo init --no-repo-verify -u https://github.com/LineageOS/android.git -b lineage-15.1 --depth=1 -g default,-mips,-darwin,-notdefault
 repo sync -c --no-clone-bundle --no-tags --optimized-fetch --prune --force-sync -j8
-git clone https://github.com/RahifM/proprietary_vendor_xiaomi -b lineage-15.1 --depth=1 vendor/xiaomi
+git clone https://github.com/RahifM/local_manifests --depth 1 -b lineage-15.1 .repo/local_manifests
+#git clone https://github.com/RahifM/proprietary_vendor_xiaomi -b lineage-15.1 --depth=1 vendor/xiaomi
 cd build/make && wget https://raw.githubusercontent.com/RahifM/repo_update/lineage-15.1-patches/relkey.patch && git apply relkey.patch && cd ../..
 . build/env*
 #brunch mido
