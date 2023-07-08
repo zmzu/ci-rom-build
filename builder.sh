@@ -8,7 +8,7 @@ time sudo apt-get install wget virtualenv rsync python2 imagemagick bc git-core 
 #ln -s /usr/bin/python3.8 /usr/bin/python
 #mkdir ~/bin
 #PATH=~/bin:$PATH
-curl https://storage.googleapis.com/git-repo-downloads/repo > ~/bin/repo
+curl https://storage.googleapis.com/git-repo-downloads/repo-1 > ~/bin/repo
 chmod a+x ~/bin/repo
 python --version
 git clone https://github.com/fabianonline/telegram.sh --depth=1 $HOME/telegram.sh
