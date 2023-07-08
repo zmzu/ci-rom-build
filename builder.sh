@@ -1,3 +1,4 @@
+set -e
 export DEBIAN_FRONTEND=noninteractive
 export USER=buildfarm
 export TZ='Asia/Kolkata'
