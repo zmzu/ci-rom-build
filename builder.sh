@@ -19,7 +19,7 @@ git config --global color.ui false
 git config --global user.name RahifM
 git config --global user.email rahifmanjatha372@gmail.com
 time repo init --no-repo-verify -u https://github.com/LineageOS/android.git -b lineage-16.0 --depth=1 -g default,-mips,-darwin,-notdefault
-git clone https://github.com/RahifM/local_manifests --depth 1 -b lineage-16.0 .repo/local_manifestsgit clone https://github.com/RahifM/local_manifests --depth 1 -b lineage-16.0 .repo/local_manifests
+git clone https://github.com/RahifM/local_manifests --depth 1 -b lineage-16.0 .repo/local_manifests
 #virtualenv -p python2 ~/python
 #. ~/python/bin/activate
 #python --version
