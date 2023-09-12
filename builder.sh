@@ -28,7 +28,7 @@ cd build/make && wget https://raw.githubusercontent.com/RahifM/repo_update/linea
 . build/env*
 #brunch mido
 lunch lineage_mido-userdebug
-make -j$(nproc --all) bootimage
+#make -j$(nproc --all) bootimage
 #breakfast mido
 #mka bacon
 #cd out/target/product/mido
