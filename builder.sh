@@ -24,7 +24,7 @@ repo init --no-repo-verify -u https://github.com/LineageOS/android.git -b lineag
 git clone https://github.com/RahifM/local_manifests --depth 1 -b lineage-15.1 .repo/local_manifests
 repo sync -c --no-clone-bundle --no-tags --optimized-fetch --prune --force-sync -j8
 #git clone https://github.com/RahifM/proprietary_vendor_xiaomi -b lineage-15.1 --depth=1 vendor/xiaomi
-cd build/make && wget https://raw.githubusercontent.com/RahifM/repo_update/lineage-15.1-patches/relkey.patch && git apply relkey.patch && cd ../..
+#cd build/make && wget https://raw.githubusercontent.com/RahifM/repo_update/lineage-15.1-patches/relkey.patch && git apply relkey.patch && cd ../..
 . build/env*
 #brunch mido
 lunch lineage_mido-userdebug
